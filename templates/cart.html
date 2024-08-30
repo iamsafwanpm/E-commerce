@@ -1,0 +1,12 @@
+{% extends 'blank_layout.html'%}
+{% block content %}
+{% if messages %}
+                    {% for message in messages %}<div class="container_message">
+                        <h2>Thankyou Choosing Us </h2>
+                    <ul class="{{message.tags}}">{{message}}</ul></div>
+                    {% endfor %}
+
+              {% else  %}     
+{% include 'cart_container.html' %}
+{% endif %}
+{% endblock content %}
